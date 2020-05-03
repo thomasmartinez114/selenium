@@ -11,6 +11,8 @@ class EntryPoint
 
         driver.Navigate().GoToUrl("http://testing.todorvachev.com");
 
+        IWebElement element = driver.FindElement(By.Name("myName"));
+
         Thread.Sleep(3000);
 
         driver.Quit();
