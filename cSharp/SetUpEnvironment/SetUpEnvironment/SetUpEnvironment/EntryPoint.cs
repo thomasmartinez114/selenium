@@ -13,7 +13,14 @@ class EntryPoint
 
         IWebElement element = driver.FindElement(By.Name("myName"));
 
-        Thread.Sleep(3000);
+        if (element.Displayed)
+        {
+            System.Console.WriteLine("Yes! I can see the element!");
+        }
+        else
+        {
+            System.Console.WriteLine("Couldn't see the element!");
+        }
 
         driver.Quit();
     }
