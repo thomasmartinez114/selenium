@@ -1,0 +1,8 @@
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\bin\Debug\netcoreapp3.1\SetUpEnvironment.exe
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\obj\Debug\netcoreapp3.1\SetUpEnvironment.csprojAssemblyReference.cache
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\obj\Debug\netcoreapp3.1\SetUpEnvironment.AssemblyInfoInputs.cache
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\obj\Debug\netcoreapp3.1\SetUpEnvironment.AssemblyInfo.cs
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\bin\Debug\netcoreapp3.1\WebDriver.dll
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\obj\Debug\netcoreapp3.1\SetUpEnvironment.csproj.CopyComplete
+C:\CareerDevs\github\java\selenium\cSharp\SetUpEnvironment\SetUpEnvironment\SetUpEnvironment\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
