@@ -10,7 +10,8 @@
         "dependencies": {
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
-          "Selenium.WebDriver.ChromeDriver": "79.0.3945.3600"
+          "Selenium.WebDriver.ChromeDriver": "79.0.3945.3600",
+          "Selenium.WebDriver.IEDriver": "3.150.1"
         },
         "runtime": {
           "SetUpEnvironment.dll": {}
@@ -180,6 +181,7 @@
         }
       },
       "Selenium.WebDriver.ChromeDriver/79.0.3945.3600": {},
+      "Selenium.WebDriver.IEDriver/3.150.1": {},
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1022,6 +1024,13 @@
       "sha512": "sha512-ng2VdpBOI4ciRJpcT7mxgEBU9FGYZ+T7reHdgrqKXoKJtTRZvqKee4qxRPdkBSGxAZKcg9wzgKr3E7YEfacy/Q==",
       "path": "selenium.webdriver.chromedriver/79.0.3945.3600",
       "hashPath": "selenium.webdriver.chromedriver.79.0.3945.3600.nupkg.sha512"
+    },
+    "Selenium.WebDriver.IEDriver/3.150.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w30U4b7qQm86jQBAm7DFJTlwXPvNmDIs5/Ebz0UPuKEFVFwWEi0IfWqnzJxzH73vspDW5hXbs2C929U4FUpbvg==",
+      "path": "selenium.webdriver.iedriver/3.150.1",
+      "hashPath": "selenium.webdriver.iedriver.3.150.1.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
