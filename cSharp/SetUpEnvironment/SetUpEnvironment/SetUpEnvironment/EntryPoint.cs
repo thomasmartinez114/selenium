@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Threading;
@@ -11,17 +11,32 @@ class EntryPoint
 
         driver.Navigate().GoToUrl("http://testing.todorvachev.com");
 
-        IWebElement element = driver.FindElement(By.Name("myName"));
+        IWebElement element = driver.FindElement(By.Name("entry-header"));
 
-        if (element.Displayed)
-        {
-            System.Console.WriteLine("Yes! I can see the element!");
-        }
-        else
-        {
-            System.Console.WriteLine("Couldn't see the element!");
-        }
+        Thread.Sleep(3000);
 
         driver.Quit();
+    }
+}
+*/
+
+using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+
+class HelloSelenium
+{
+    static void Main()
+    {
+        using (IWebDriver driver = new FirefoxDriver())
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            driver.Navigate().GoToUrl("https://www.google.com/ncr");
+            driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
+            IWebElement firstResult = wait.Until(ExpectedConditions.ElementExists(By.CssSelector("h3>div")));
+            Console.WriteLine(firstResult.GetAttribute("textContent"));
+        }
     }
 }

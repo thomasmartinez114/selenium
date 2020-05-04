@@ -8,9 +8,11 @@
     ".NETCoreApp,Version=v3.1": {
       "SetUpEnvironment/1.0.0": {
         "dependencies": {
+          "Selenium.Chrome.WebDriver": "79.0.0",
+          "Selenium.Firefox.WebDriver": "0.26.0",
           "Selenium.Support": "3.141.0",
           "Selenium.WebDriver": "3.141.0",
-          "Selenium.WebDriver.ChromeDriver": "81.0.4044.6900"
+          "Selenium.WebDriver.ChromeDriver": "79.0.3945.3600"
         },
         "runtime": {
           "SetUpEnvironment.dll": {}
@@ -157,6 +159,8 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "Selenium.Chrome.WebDriver/79.0.0": {},
+      "Selenium.Firefox.WebDriver/0.26.0": {},
       "Selenium.Support/3.141.0": {
         "dependencies": {
           "Selenium.WebDriver": "3.141.0"
@@ -179,7 +183,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/81.0.4044.6900": {},
+      "Selenium.WebDriver.ChromeDriver/79.0.3945.3600": {},
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1002,6 +1006,20 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
+    "Selenium.Chrome.WebDriver/79.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BKamee/fxFy7+hvQD7rXMWaYxdrSQDZHevT5NeMeDCqD2c1jsFh0zAbGR56usfWOpuIJT8RC6TWDkcSQjeWS6A==",
+      "path": "selenium.chrome.webdriver/79.0.0",
+      "hashPath": "selenium.chrome.webdriver.79.0.0.nupkg.sha512"
+    },
+    "Selenium.Firefox.WebDriver/0.26.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l0N+Vw4/Y1kq/BX5JnRbgFSVkNC89EH3Vg/T1KlchO9MTOgGVdn2JGqNJWXZ7recxWu7WolCvUBPmzqnMQlSaQ==",
+      "path": "selenium.firefox.webdriver/0.26.0",
+      "hashPath": "selenium.firefox.webdriver.0.26.0.nupkg.sha512"
+    },
     "Selenium.Support/3.141.0": {
       "type": "package",
       "serviceable": true,
@@ -1016,12 +1034,12 @@
       "path": "selenium.webdriver/3.141.0",
       "hashPath": "selenium.webdriver.3.141.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/81.0.4044.6900": {
+    "Selenium.WebDriver.ChromeDriver/79.0.3945.3600": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UQ1BIbA+XkjwsX9j8bDDtucNgMRdpnxuxjer37SuOpztjpgVA/5dOAPfGePjm36kT+NNb4mDsxqhKcKM6b14ow==",
-      "path": "selenium.webdriver.chromedriver/81.0.4044.6900",
-      "hashPath": "selenium.webdriver.chromedriver.81.0.4044.6900.nupkg.sha512"
+      "sha512": "sha512-ng2VdpBOI4ciRJpcT7mxgEBU9FGYZ+T7reHdgrqKXoKJtTRZvqKee4qxRPdkBSGxAZKcg9wzgKr3E7YEfacy/Q==",
+      "path": "selenium.webdriver.chromedriver/79.0.3945.3600",
+      "hashPath": "selenium.webdriver.chromedriver.79.0.3945.3600.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
