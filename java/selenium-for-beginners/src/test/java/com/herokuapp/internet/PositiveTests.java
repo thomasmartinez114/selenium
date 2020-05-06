@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class PositiveTests {
 	
 	public void loginTest() {
+		System.out.println("Starting loginTest");
+		
 //		   Create driver
 		   System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 		   WebDriver driver = new ChromeDriver();
@@ -19,6 +21,10 @@ public class PositiveTests {
 //		   open test page
 		   String url = "http://the-internet.herokuapp.com/login";
 		   driver.get(url);
+		   System.out.println("Page is open");
+		   
+//		   sleep for 2 seconds
+		   sleep(2000);
 		   
 		
 //		   enter username
