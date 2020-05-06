@@ -14,6 +14,9 @@ public class PositiveTests {
 		   String url = "http://the-internet.herokuapp.com/login";
 		   driver.get(url);
 		   
+//		   sleep for 3 seconds
+		   sleep();
+		   
 //		   maxmize browser window
 		   driver.manage().window().maximize();
 		
@@ -28,6 +31,15 @@ public class PositiveTests {
 //			   new url
 //			   logout button is visible
 //			   successful login message
+	}
+
+	private void sleep() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
