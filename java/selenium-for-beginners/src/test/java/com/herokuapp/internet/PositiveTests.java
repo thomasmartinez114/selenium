@@ -2,9 +2,11 @@ package com.herokuapp.internet;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class PositiveTests {
 	
+	@Test
 	public void loginTest() {
 		System.out.println("Starting loginTest");
 		
