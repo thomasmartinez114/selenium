@@ -40,6 +40,10 @@ public class PositiveTests {
 //			   new url
 //			   logout button is visible
 //			   successful login message
+		   
+//		   Close browser
+		   driver.quit();
+		   
 	}
 
 	private void sleep(long m) {
