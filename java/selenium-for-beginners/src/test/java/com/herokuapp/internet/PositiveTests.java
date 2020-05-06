@@ -11,7 +11,8 @@ public class PositiveTests {
 		   WebDriver driver = new ChromeDriver();
 		
 //		   open test page
-		
+		   String url = "http://the-internet.herokuapp.com/login";
+		   driver.get(url);
 		
 //		   enter username
 		
