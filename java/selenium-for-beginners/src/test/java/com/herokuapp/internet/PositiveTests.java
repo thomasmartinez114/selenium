@@ -1,5 +1,8 @@
 package com.herokuapp.internet;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 public class PositiveTests {
 	
 	public void loginTest() {
