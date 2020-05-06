@@ -13,6 +13,9 @@ public class PositiveTests {
 //		   open test page
 		   String url = "http://the-internet.herokuapp.com/login";
 		   driver.get(url);
+		   
+//		   maxmize browser window
+		   driver.manage().window().maximize();
 		
 //		   enter username
 		
