@@ -11,7 +11,7 @@ public class PositiveTests {
 		   WebDriver driver = new ChromeDriver();
 		
 //		   sleep for 3 seconds
-		   sleep();
+		   sleep(3000);
 		   
 //		   maxmize browser window
 		   driver.manage().window().maximize();
@@ -34,9 +34,9 @@ public class PositiveTests {
 //			   successful login message
 	}
 
-	private void sleep() {
+	private void sleep(long m) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(m);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
