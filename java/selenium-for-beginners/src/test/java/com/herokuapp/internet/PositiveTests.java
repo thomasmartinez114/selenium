@@ -25,8 +25,8 @@ public class PositiveTests {
 		   driver.get(url);
 		   System.out.println("Page is open");
 		   
-//		   sleep for 3 seconds
-		   sleep(3000);
+//		   sleep for 2 seconds
+		   sleep(2000);
 		   
 		
 //		   enter username
