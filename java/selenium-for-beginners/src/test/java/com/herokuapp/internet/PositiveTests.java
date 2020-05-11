@@ -17,7 +17,7 @@ public class PositiveTests {
 //		   sleep for 3 seconds
 		   sleep(3000);
 		   
-//		   maxmize browser window
+//		   maximize browser window
 		   driver.manage().window().maximize();
 
 //		   open test page
@@ -25,8 +25,8 @@ public class PositiveTests {
 		   driver.get(url);
 		   System.out.println("Page is open");
 		   
-//		   sleep for 2 seconds
-		   sleep(2000);
+//		   sleep for 3 seconds
+		   sleep(3000);
 		   
 		
 //		   enter username
