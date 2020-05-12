@@ -32,11 +32,14 @@ public class PositiveTests {
 		   
 		
 //		   enter username
-		WebElement username = driver.findElement(By.id("username"));
+		   WebElement username = driver.findElement(By.id("username"));
 		
 		
 //		   enter password
+		   WebElement password = driver.findElement(By.name("password"));
+		   
 //		   click login button
+		   WebElement logInButton = driver.findElement(By.tagName("button"));
 //		   
 //		   verifications:
 //			   new url
