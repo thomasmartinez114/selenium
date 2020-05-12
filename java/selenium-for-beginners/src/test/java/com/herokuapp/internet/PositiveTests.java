@@ -48,6 +48,7 @@ public class PositiveTests {
 		   WebElement logOutButton = driver.findElement(By.xpath("//a[@class='button secondary radius']"));
 		   
 //			   successful login message
+		   WebElement successMessage = driver.findElement(By.cssSelector("#flash"));
 		   
 //		   Close browser
 		   driver.quit();
