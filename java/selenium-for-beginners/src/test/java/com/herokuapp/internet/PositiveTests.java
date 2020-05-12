@@ -43,7 +43,10 @@ public class PositiveTests {
 //		   
 //		   verifications:
 //			   new url
+		   
 //			   logout button is visible
+		   WebElement logOutButton = driver.findElement(By.xpath("//a[@class='button secondary radius']"));
+		   
 //			   successful login message
 		   
 //		   Close browser
