@@ -1,6 +1,8 @@
 package com.herokuapp.internet;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -25,12 +27,12 @@ public class PositiveTests {
 		   driver.get(url);
 		   System.out.println("Page is open");
 		   
-//		   sleep for 3 seconds
-		   sleep(3000);
+//		   sleep for 2 seconds
+		   sleep(2000);
 		   
 		
 //		   enter username
-		
+		WebElement username = driver.findElement(By.id("username"));
 		
 		
 //		   enter password
