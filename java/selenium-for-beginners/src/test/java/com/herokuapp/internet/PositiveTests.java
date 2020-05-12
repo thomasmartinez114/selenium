@@ -34,15 +34,21 @@ public class PositiveTests {
 //		   enter username
 		   WebElement username = driver.findElement(By.id("username"));
 		   username.sendKeys("tomsmith");
+		   
+		   sleep(1000);
 		
 		
 //		   enter password
 		   WebElement password = driver.findElement(By.name("password"));
 		   password.sendKeys("SuperSecretPassword!");
 		   
+		   sleep(3000);
+		   
 //		   click login button
 		   WebElement logInButton = driver.findElement(By.tagName("button"));
 		   logInButton.click();
+		   
+		   sleep(5000);
 //		   
 //		   verifications:
 //			   new url
