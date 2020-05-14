@@ -56,6 +56,8 @@ public class PositiveTests {
 		   WebElement successMessage = driver.findElement(By.xpath("//div[@id='flash']"));
 		   String expectedMessage = "You logged into a secure area!";
 		   String actualMessage = successMessage.getText();
+		   // Compare the messages now
+		   Assert.assertEquals(actualMessage, expectedMessage, "Actual message is not the same as expected");
 		   
 		   
 		   
