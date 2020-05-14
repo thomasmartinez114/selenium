@@ -54,6 +54,9 @@ public class PositiveTests {
 		   
 //			   successful login message
 		   WebElement successMessage = driver.findElement(By.xpath("//div[@id='flash']"));
+		   String expectedMessage = "You logged into a secure area!";
+		   String actualMessage = successMessage.getText();
+		   
 		   
 		   
 //		   Close browser
