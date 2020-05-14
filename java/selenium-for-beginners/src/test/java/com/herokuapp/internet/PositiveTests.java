@@ -38,7 +38,7 @@ public class PositiveTests {
 		   
 //		   click login button
 		   WebElement logInButton = driver.findElement(By.tagName("button"));
-		   logInButton.click();
+//		   logInButton.click();
 		   
 		   sleep(3000);
 //		   
