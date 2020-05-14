@@ -38,7 +38,7 @@ public class PositiveTests {
 		   
 //		   click login button
 		   WebElement logInButton = driver.findElement(By.tagName("button"));
-//		   logInButton.click();
+		   logInButton.click();
 		   
 		   sleep(3000);
 //		   
@@ -50,6 +50,7 @@ public class PositiveTests {
 		   
 //			   logout button is visible
 		   WebElement logOutButton = driver.findElement(By.xpath("//a[@class='button secondary radius']"));
+		   Assert.assertTrue(logOutButton.isDisplayed(), "Log Out button is not visible");
 		   
 //			   successful login message
 		   WebElement successMessage = driver.findElement(By.xpath("//div[@id='flash']"));
