@@ -8,63 +8,66 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PositiveTests {
-	
+
 	@Test
 	public void loginTest() {
 		System.out.println("Starting loginTest");
-		
+
 //		   Create driver
-		   System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-		   WebDriver driver = new ChromeDriver();
-		
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
 //		   sleep for 3 seconds
-		   sleep(3000);
-		   
+		sleep(3000);
+
 //		   maximize browser window
-		   driver.manage().window().maximize();
+		driver.manage().window().maximize();
 
 //		   open test page
-		   String url = "http://the-internet.herokuapp.com/login";
-		   driver.get(url);
-		   System.out.println("Page is open");		   
-		
+		String url = "http://the-internet.herokuapp.com/login";
+		driver.get(url);
+		System.out.println("Page is open");
+
 //		   enter username
-		   WebElement username = driver.findElement(By.id("username"));
-		   username.sendKeys("tomsmith");		
-		
+		WebElement username = driver.findElement(By.id("username"));
+		username.sendKeys("tomsmith");
+
 //		   enter password
-		   WebElement password = driver.findElement(By.name("password"));
-		   password.sendKeys("SuperSecretPassword!");
-		   
+		WebElement password = driver.findElement(By.name("password"));
+		password.sendKeys("SuperSecretPassword!");
+
 //		   click login button
-		   WebElement logInButton = driver.findElement(By.tagName("button"));
-		   logInButton.click();
-		   
-		   sleep(3000);
+		WebElement logInButton = driver.findElement(By.tagName("button"));
+		logInButton.click();
+
+		sleep(3000);
 //		   
 //		   verifications:
 //			   new url
-		   String expectedUrl = "http://the-internet.herokuapp.com/secure";
-		   String actualUrl = driver.getCurrentUrl();
-		   Assert.assertEquals(actualUrl, expectedUrl, "Actual page URL is not the same as expected.");
-		   
+		String expectedUrl = "http://the-internet.herokuapp.com/secure";
+		String actualUrl = driver.getCurrentUrl();
+		Assert.assertEquals(actualUrl, expectedUrl, "Actual page URL is not the same as expected.");
+
 //			   logout button is visible
-		   WebElement logOutButton = driver.findElement(By.xpath("//a[@class='button secondary radius']"));
-		   Assert.assertTrue(logOutButton.isDisplayed(), "Log Out button is not visible");
-		   
+		WebElement logOutButton = driver.findElement(By.xpath("//a[@class='button secondary radius']"));
+		Assert.assertTrue(logOutButton.isDisplayed(), "Log Out button is not visible");
+
 //			   successful login message
-		   WebElement successMessage = driver.findElement(By.xpath("//div[@id='flash']"));
-		   String expectedMessage = "You logged into a secure area!";
-		   String actualMessage = successMessage.getText();
-		   // Compare the messages now
-		   // Assert.assertEquals fails due to the x on the window to exit the message is copied over
-		   //Assert.assertEquals(actualMessage, expectedMessage, "Actual message is not the same as expected"); 
-		   
-		   
-		   
+		WebElement successMessage = driver.findElement(By.xpath("//div[@id='flash']"));
+		String expectedMessage = "You logged into a secure area!";
+		String actualMessage = successMessage.getText();
+		// Compare the messages now
+		// Assert.assertEquals fails due to the x on the window to exit the message is
+		// copied over
+		// Assert.assertEquals(actualMessage, expectedMessage, "Actual message is not
+		// the same as expected");
+		Assert.assertTrue(actualMessage.contains(expectedMessage),
+				"Actual message does not contain the expected message.\nActual Message: " + actualMessage
+						+ "\nExpected Message: " + expectedMessage);
+
 //		   Close browser
-		   driver.quit();
-		   
+		driver.quit();
+
 	}
 
 	private void sleep(long m) {
@@ -75,5 +78,5 @@ public class PositiveTests {
 			e.printStackTrace();
 		}
 	}
-	
+
 }
