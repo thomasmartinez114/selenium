@@ -33,7 +33,7 @@ public class NegativeTests {
 		username.sendKeys("tmartinez");
 
 		// enter password
-		WebElement password = driver.findElement(By.className("password"));
+		WebElement password = driver.findElement(By.name("password"));
 		password.sendKeys("SuperSecretPassword!");
 
 		// click login button
