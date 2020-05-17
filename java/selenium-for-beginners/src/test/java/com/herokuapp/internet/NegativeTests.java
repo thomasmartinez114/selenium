@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class NegativeTests {
@@ -38,6 +39,15 @@ public class NegativeTests {
 		// click login button
 		WebElement loginButton = driver.findElement(By.tagName("button"));
 		loginButton.click();
+		
+		// invalid username error
+		WebElement invalidMessage = driver.findElement(By.xpath("//div[@id='flash']"));
+		String expectedMessage = "Your username is invalid!";
+		String actualMessage = invalidMessage.getText();
+		// Assertion to compare
+		Assert.assertTrue(actualMessage.contains(expectedMessage),
+				"Actual message does not contain the expected message.\nActual Message: " + actualMessage
+				+ "\nExpected Message: " + expectedMessage);
 
 	}
 
