@@ -1,6 +1,8 @@
 package com.herokuapp.internet;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -24,6 +26,10 @@ public class NegativeTests {
 		String url = "http://the-internet.herokuapp.com/login";
 		driver.get(url);
 		System.out.println("Page is open");
+		
+		// enter incorrect username
+		WebElement username = driver.findElement(By.id("username"));
+		username.sendKeys("tmartinez");
 		
 	}
 
