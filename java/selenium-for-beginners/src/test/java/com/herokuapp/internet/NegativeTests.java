@@ -48,6 +48,9 @@ public class NegativeTests {
 		Assert.assertTrue(actualMessage.contains(expectedMessage),
 				"Actual message does not contain the expected message.\nActual Message: " + actualMessage
 				+ "\nExpected Message: " + expectedMessage);
+		
+		// Close browser
+		driver.quit();
 
 	}
 
