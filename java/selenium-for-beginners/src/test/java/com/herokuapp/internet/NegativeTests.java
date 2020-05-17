@@ -13,6 +13,18 @@ public class NegativeTests {
 		// Create driver
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		
+		// sleep for 3 seconds
+		sleep(3000);
+		
+		// maximize browser window
+		driver.manage().window().maximize();
+		
+		// open page
+		String url = "http://the-internet.herokuapp.com/login";
+		driver.get(url);
+		System.out.println("Page is open");
+		
 	}
 
 }
