@@ -40,6 +40,8 @@ public class NegativeTests {
 		WebElement loginButton = driver.findElement(By.tagName("button"));
 		loginButton.click();
 		
+		sleep(3000);
+		
 		// invalid username error
 		WebElement invalidMessage = driver.findElement(By.xpath("//div[@id='flash']"));
 		String expectedMessage = "Your username is invalid!";
