@@ -35,6 +35,10 @@ public class NegativeTests {
 		WebElement password = driver.findElement(By.className("password"));
 		password.sendKeys("SuperSecretPassword!");
 		
+		// click login button
+		WebElement loginButton = driver.findElement(By.tagName("button"));
+		loginButton.click();
+		
 	}
 
 }
