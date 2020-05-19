@@ -36,12 +36,12 @@ public class NegativeTests {
 		System.out.println("Page is open");
 
 		// enter incorrect username
-		WebElement username = driver.findElement(By.id("username"));
-		username.sendKeys("tmartinez");
+		WebElement usernameElement = driver.findElement(By.id("username"));
+		usernameElement.sendKeys(username);
 
 		// enter password
-		WebElement password = driver.findElement(By.name("password"));
-		password.sendKeys("SuperSecretPassword!");
+		WebElement passwordElement = driver.findElement(By.name("password"));
+		passwordElement.sendKeys(password);
 
 		// click login button
 		WebElement loginButton = driver.findElement(By.tagName("button"));
@@ -51,12 +51,11 @@ public class NegativeTests {
 
 		// invalid username error
 		WebElement invalidMessage = driver.findElement(By.xpath("//div[@id='flash']"));
-		String expectedMessage = "Your username is invalid!";
 		String actualMessage = invalidMessage.getText();
 		// Assertion to compare
-		Assert.assertTrue(actualMessage.contains(expectedMessage),
+		Assert.assertTrue(actualMessage.contains(expectedErrorMessage),
 				"Actual message does not contain the expected message.\nActual Message: " + actualMessage
-						+ "\nExpected Message: " + expectedMessage);
+						+ "\nExpected Message: " + expectedErrorMessage);
 
 		// Close browser
 		driver.quit();
