@@ -13,7 +13,7 @@ public class NegativeTests {
 	@Parameters({ "username", "password", "expectedMessage" })
 	@Test(priority = 1)
 	public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
-		System.out.println("Starting incorrectUsernameTest");
+		System.out.println("Starting negativeLoginTest with " + username + " and " + password);
 
 		// Create driver
 		// System.setProperty("webdriver.chrome.driver",
