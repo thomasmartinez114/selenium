@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,8 +15,12 @@ public class NegativeTests {
 		System.out.println("Starting incorrectUsernameTest");
 
 		// Create driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		// System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		// WebDriver driver = new ChromeDriver();
+		
+		// Create driver for Firefox
+		System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
 
 		// sleep for 3 seconds
 		sleep(3000);
