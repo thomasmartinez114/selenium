@@ -11,13 +11,14 @@ import org.testng.annotations.Test;
 public class NegativeTests {
 
 	@Test(priority = 1)
-	public void incorrectUsernameTest() {
+	public void negativeLoginTest() {
 		System.out.println("Starting incorrectUsernameTest");
 
 		// Create driver
-		// System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver",
+		// "src/main/resources/chromedriver.exe");
 		// WebDriver driver = new ChromeDriver();
-		
+
 		// Create driver for Firefox
 		System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
@@ -44,9 +45,9 @@ public class NegativeTests {
 		// click login button
 		WebElement loginButton = driver.findElement(By.tagName("button"));
 		loginButton.click();
-		
+
 		sleep(3000);
-		
+
 		// invalid username error
 		WebElement invalidMessage = driver.findElement(By.xpath("//div[@id='flash']"));
 		String expectedMessage = "Your username is invalid!";
@@ -54,13 +55,13 @@ public class NegativeTests {
 		// Assertion to compare
 		Assert.assertTrue(actualMessage.contains(expectedMessage),
 				"Actual message does not contain the expected message.\nActual Message: " + actualMessage
-				+ "\nExpected Message: " + expectedMessage);
-		
+						+ "\nExpected Message: " + expectedMessage);
+
 		// Close browser
 		driver.quit();
 
 	}
-	
+
 	/*
 	 * @Test(priority = 2) public void incorrectPasswordTest() {
 	 * System.out.println("Starting negativeUsernameTest");
