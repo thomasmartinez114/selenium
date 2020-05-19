@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class NegativeTests {
 
-	@Test
+	@Test(priority = 1)
 	public void incorrectUsernameTest() {
 		System.out.println("Starting incorrectUsernameTest");
 
@@ -61,7 +61,7 @@ public class NegativeTests {
 
 	}
 	
-		@Test
+		@Test(priority = 2)
 		public void incorrectPasswordTest() {
 			System.out.println("Starting negativeUsernameTest");
 
