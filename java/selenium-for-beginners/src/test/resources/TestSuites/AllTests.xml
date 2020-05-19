@@ -10,8 +10,7 @@
  
   <test name="NegativeTests">
     <classes>
-      <class name="test.sample.ParameterSample"/>
-      <class name="test.sample.ParameterTest"/>
+      <class name="com.herokuapp.internet.NegativeTests"/>
     </classes>
   </test>
   
