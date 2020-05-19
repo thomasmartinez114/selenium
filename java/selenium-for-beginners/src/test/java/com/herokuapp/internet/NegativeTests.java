@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class NegativeTests {
 
-	@Test
+	//@Test
 	public void negativeUsernameTest() {
 		System.out.println("Starting negativeUsernameTest");
 
