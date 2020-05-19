@@ -5,12 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class NegativeTests {
 
+	@Parameters({ "username", "password", "expectedMessage" })
 	@Test(priority = 1)
-	public void negativeLoginTest() {
+	public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
 		System.out.println("Starting incorrectUsernameTest");
 
 		// Create driver
