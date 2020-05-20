@@ -9,10 +9,10 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class PositiveTests {
+public class LoginTests {
 
 	@Test
-	public void loginTest() {
+	public void positiveLoginTest() {
 		System.out.println("Starting loginTest");
 
 //		   Create driver
@@ -71,7 +71,7 @@ public class PositiveTests {
 		driver.quit();
 
 	}
-	
+
 	@Parameters({ "username", "password", "expectedMessage" })
 	@Test(priority = 1)
 	public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
