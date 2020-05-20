@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class LoginTests {
 
-	@Test
+	@Test(priority = 1, groups = { "positiveTests", "smokeTests" })
 	public void positiveLoginTest() {
 		System.out.println("Starting loginTest");
 
@@ -73,7 +73,7 @@ public class LoginTests {
 	}
 
 	@Parameters({ "username", "password", "expectedMessage" })
-	@Test(priority = 1)
+	@Test(priority = 2, groups = { "negativeTests", "smokeTests" })
 	public void negativeLoginTest(String username, String password, String expectedErrorMessage) {
 		System.out.println("Starting negativeLoginTest with " + username + " and " + password);
 
