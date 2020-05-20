@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="3" total="6" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-19T00:57:39 EDT" name="NegativeTestsSuite" finished-at="2020-05-19T00:58:03 EDT" duration-ms="24056">
+  <suite started-at="2020-05-19T23:49:20 EDT" name="NegativeTestsSuite" finished-at="2020-05-19T23:50:04 EDT" duration-ms="44286">
     <groups>
+      <group name="positiveTests">
+        <method signature="LoginTests.positiveLoginTest()[pri:1, instance:com.herokuapp.internet.LoginTests@2898ac89]" name="positiveLoginTest" class="com.herokuapp.internet.LoginTests"/>
+      </group> <!-- positiveTests -->
+      <group name="smokeTests">
+        <method signature="LoginTests.positiveLoginTest()[pri:1, instance:com.herokuapp.internet.LoginTests@2898ac89]" name="positiveLoginTest" class="com.herokuapp.internet.LoginTests"/>
+        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.herokuapp.internet.LoginTests@186f8716]" name="negativeLoginTest" class="com.herokuapp.internet.LoginTests"/>
+        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.herokuapp.internet.LoginTests@ba54932]" name="negativeLoginTest" class="com.herokuapp.internet.LoginTests"/>
+      </group> <!-- smokeTests -->
+      <group name="negativeTests">
+        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.herokuapp.internet.LoginTests@186f8716]" name="negativeLoginTest" class="com.herokuapp.internet.LoginTests"/>
+        <method signature="LoginTests.negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.herokuapp.internet.LoginTests@ba54932]" name="negativeLoginTest" class="com.herokuapp.internet.LoginTests"/>
+      </group> <!-- negativeTests -->
     </groups>
-    <test started-at="2020-05-19T00:57:39 EDT" name="NegativeUsernameTests" finished-at="2020-05-19T00:57:51 EDT" duration-ms="12548">
-      <class name="com.herokuapp.internet.NegativeTests">
-        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.internet.NegativeTests@31f9b85e]" started-at="2020-05-19T00:57:39 EDT" name="negativeLoginTest" finished-at="2020-05-19T00:57:51 EDT" duration-ms="12492" status="PASS">
+    <test started-at="2020-05-19T23:49:20 EDT" name="PositiveTests" finished-at="2020-05-19T23:49:37 EDT" duration-ms="17324">
+      <class name="com.herokuapp.internet.LoginTests">
+        <test-method signature="positiveLoginTest()[pri:1, instance:com.herokuapp.internet.LoginTests@2898ac89]" started-at="2020-05-19T23:49:20 EDT" name="positiveLoginTest" finished-at="2020-05-19T23:49:37 EDT" duration-ms="17171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveLoginTest -->
+      </class> <!-- com.herokuapp.internet.LoginTests -->
+    </test> <!-- PositiveTests -->
+    <test started-at="2020-05-19T23:49:37 EDT" name="NegativeUsernameTests" finished-at="2020-05-19T23:49:51 EDT" duration-ms="14036">
+      <class name="com.herokuapp.internet.LoginTests">
+        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.herokuapp.internet.LoginTests@186f8716]" started-at="2020-05-19T23:49:37 EDT" name="negativeLoginTest" finished-at="2020-05-19T23:49:51 EDT" duration-ms="14027" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,11 +48,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLoginTest -->
-      </class> <!-- com.herokuapp.internet.NegativeTests -->
+      </class> <!-- com.herokuapp.internet.LoginTests -->
     </test> <!-- NegativeUsernameTests -->
-    <test started-at="2020-05-19T00:57:52 EDT" name="NegativePasswordTests" finished-at="2020-05-19T00:58:03 EDT" duration-ms="11429">
-      <class name="com.herokuapp.internet.NegativeTests">
-        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.herokuapp.internet.NegativeTests@7748410a]" started-at="2020-05-19T00:57:52 EDT" name="negativeLoginTest" finished-at="2020-05-19T00:58:03 EDT" duration-ms="11426" status="PASS">
+    <test started-at="2020-05-19T23:49:51 EDT" name="NegativePasswordTests" finished-at="2020-05-19T23:50:04 EDT" duration-ms="12706">
+      <class name="com.herokuapp.internet.LoginTests">
+        <test-method signature="negativeLoginTest(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.herokuapp.internet.LoginTests@ba54932]" started-at="2020-05-19T23:49:51 EDT" name="negativeLoginTest" finished-at="2020-05-19T23:50:04 EDT" duration-ms="12700" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,7 +61,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[incorrectPassword]]>
+                <![CDATA[incorrectPassword!]]>
               </value>
             </param>
             <param index="2">
@@ -53,7 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- negativeLoginTest -->
-      </class> <!-- com.herokuapp.internet.NegativeTests -->
+      </class> <!-- com.herokuapp.internet.LoginTests -->
     </test> <!-- NegativePasswordTests -->
   </suite> <!-- NegativeTestsSuite -->
 </testng-results>
