@@ -9,7 +9,7 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="com.herokuapp.theinternet.LoginTests" />
+			<class name="com.herokuapp.internet.LoginTests" />
 		</classes>
 	</test>
 
@@ -19,7 +19,7 @@
 		<parameter name="expectedMessage"
 			value="Your username is invalid!" />
 		<classes>
-			<class name="com.herokuapp.theinternet.LoginTests">
+			<class name="com.herokuapp.internet.LoginTests">
 				<methods>
 					<include name="negativeLoginTest"></include>
 				</methods>
@@ -33,7 +33,7 @@
 		<parameter name="expectedMessage"
 			value="Your password is invalid!" />
 		<classes>
-			<class name="com.herokuapp.theinternet.LoginTests">
+			<class name="com.herokuapp.internet.LoginTests">
 				<methods>
 					<include name="negativeLoginTest"></include>
 				</methods>
