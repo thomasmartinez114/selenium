@@ -3,6 +3,11 @@
 <suite name="NegativeTestsSuite" verbose="1">
 
 	<test name="PositiveTests">
+		<groups>
+			<run>
+				<include name="positiveTests"></include>
+			</run>
+		</groups>
 		<classes>
 			<class name="com.herokuapp.internet.PositiveTests" />
 		</classes>
