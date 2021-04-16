@@ -8,6 +8,15 @@
 	<name>GNIE Joomla Update</name>
 	<description>Updating Joomla Automation</description>
 
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+		</dependency>
+	</dependencies>
+
 
 	<build>
 		<plugins>
