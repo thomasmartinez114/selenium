@@ -25,9 +25,6 @@ public class PositiveTests {
 		driver.get(url);
 		System.out.println("Edge browser as been open.");
 		
-		// sleep for 3 seconds to view action
-		sleep(4000);
-		
 		// Log into Joomla Admin
 
 		// Enter username
@@ -43,13 +40,27 @@ public class PositiveTests {
 		loginButton.click();
 		
 		// sleep
-		sleep(5000);
-				
+		sleep(3000);
+		
+		// Click Joomla Update Button
+		WebElement updateButton = driver.findElement(By.xpath("//div[@id='system-message-container']/div[1]/button[@class='btn btn-primary']"));
+		updateButton.click();
+		
+		// sleep
+		sleep(3000);
+		
+		// Click to install update
+		WebElement installButton = driver.findElement(By.xpath("/html//form[@id='adminForm']//table[@class='table table-striped']//button[@class='btn btn-primary']"));
+		installButton.click();
+		
+		// sleep for install
+		sleep(600000);
+		
 		// Verification:
 		// new url
 		
 		// Close Browser
-		driver.quit();
+//		driver.quit();
 
 	}
 
