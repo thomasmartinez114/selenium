@@ -26,18 +26,24 @@ public class PositiveTests {
 		System.out.println("Edge browser as been open.");
 		
 		// sleep for 3 seconds to view action
-		sleep(3000);
+		sleep(4000);
 		
 		// Log into Joomla Admin
 
 		// Enter username
 		WebElement username = driver.findElement(By.id("mod-login-username"));
+		username.sendKeys("");
 
 		// Enter password
 		WebElement password = driver.findElement(By.id("mod-login-password"));
+		password.sendKeys("");
 
 		// Click login button
 		WebElement loginButton = driver.findElement(By.tagName("button"));
+		loginButton.click();
+		
+		// sleep
+		sleep(5000);
 				
 		// Verification:
 		// new url
