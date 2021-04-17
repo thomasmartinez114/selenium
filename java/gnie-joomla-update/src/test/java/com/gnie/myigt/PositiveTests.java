@@ -15,9 +15,6 @@ public class PositiveTests {
 		System.setProperty("webdriver.edge.driver", "src/main/resources/msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 
-		// sleep for 3 seconds to view action
-		sleep(3000);
-
 		// Maximize browser window
 		driver.manage().window().maximize();
 
@@ -25,6 +22,9 @@ public class PositiveTests {
 		String url = "https://gnieqa.myigt.com/sites/cr/cc/administrator/index.php";
 		driver.get(url);
 		System.out.println("Edge browser as been open.");
+		
+		// sleep for 3 seconds to view action
+		sleep(3000);
 
 		// Enter username
 
