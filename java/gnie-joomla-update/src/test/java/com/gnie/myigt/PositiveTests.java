@@ -3,7 +3,7 @@ package com.gnie.myigt;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class PositiveTests {
@@ -11,19 +11,30 @@ public class PositiveTests {
 	@Test
 	public void loginTest() {
 		
+		String[] sites = {
+				"https://gnieqa.myigt.com/sites/us/cc/administrator/index.php", 
+				"https://gnieqa.myigt.com/sites/us/dca/administrator/index.php", 
+				"https://gnieqa.myigt.com/sites/us/fst/administrator/index.php", 
+				"https://gnieqa.myigt.com/sites/us/rrf/administrator/index.php", 
+				"https://gnieqa.myigt.com/sites/us/sd/administrator/index.php", 
+				"https://gnieqa.myigt.com/sites/us/to/administrator/index.php", 
+				"https://sch.gnieqa.myigt.com/schedule/administrator/index.php"};
+		
+		for (int instance = 0; instance < sites.length; instance++) {
+		
 		System.out.println("Starting login");
 
-		// Create Edge Driver
-		System.setProperty("webdriver.edge.driver", "src/main/resources/msedgedriver.exe");
-		WebDriver driver = new EdgeDriver();
+		// Create Chrome Driver
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 
 		// Maximize browser window
 		driver.manage().window().maximize();
 
 		// Open test page
-		String url = "https://gnieqa.myigt.com/sites/cr/cc/administrator/index.php";
+		String url = sites[instance];
 		driver.get(url);
-		System.out.println("Edge browser as been open.");
+		System.out.println("Browser as been open.");
 		
 		// Log into Joomla Admin
 
@@ -40,10 +51,11 @@ public class PositiveTests {
 		loginButton.click();
 		
 		// sleep
-		sleep(3000);
+		sleep(8000);
 		
 		// Click Joomla Update Button
-		WebElement updateButton = driver.findElement(By.xpath("//div[@id='system-message-container']/div[1]/button[@class='btn btn-primary']"));
+//		WebElement updateButton = driver.findElement(By.xpath("//div[@id='system-message-container']/div[1]/button[@class='btn btn-primary']"));
+		WebElement updateButton = driver.findElement(By.xpath('document.location='+site[instance]+'?option=com_joomlaupdate'))
 		updateButton.click();
 		
 		// sleep
@@ -53,14 +65,17 @@ public class PositiveTests {
 		WebElement installButton = driver.findElement(By.xpath("/html//form[@id='adminForm']//table[@class='table table-striped']//button[@class='btn btn-primary']"));
 		installButton.click();
 		
-		// sleep for install
-		sleep(600000);
+		}
 		
-		// Verification:
-		// new url
-		
-		// Close Browser
+//		// sleep for install
+//		sleep(600000);
+//		
+//		// Verification:
+//		// new url
+//		
+//		// Close Browser
 //		driver.quit();
+		
 
 	}
 
