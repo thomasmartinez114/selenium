@@ -11,7 +11,7 @@ public class PositiveTests {
 	@Test
 	public void loginTest() {
 
-		String[] sites = { "https://gnieqa.myigt.com/sites/us/cc/administrator/index.php",
+		String[] sites = {
 				"https://gnieqa.myigt.com/sites/us/dca/administrator/index.php",
 				"https://gnieqa.myigt.com/sites/us/fst/administrator/index.php",
 				"https://gnieqa.myigt.com/sites/us/rrf/administrator/index.php",
@@ -32,7 +32,7 @@ public class PositiveTests {
 			WebDriver driver = new ChromeDriver();
 
 			// Maximize browser window
-			driver.manage().window().maximize();
+			// driver.manage().window().maximize();
 
 			// Open test page
 			String url = sites[instance];
@@ -57,11 +57,12 @@ public class PositiveTests {
 			sleep(8000);
 
 			// Set Joomla Update Button
-			String joomlaUpdate = "document.location=" + gnieSite + "?option=com_joomlaupdate";
+//			String joomlaUpdate = "//button[@onClick=document.location=" + gnieSite + "?option=com_joomlaupdate";
 
 			// Click Joomla Update Button
-//		WebElement updateButton = driver.findElement(By.xpath("//div[@id='system-message-container']/div[1]/button[@class='btn btn-primary']"));
-			WebElement updateButton = driver.findElement(By.xpath(joomlaUpdate));
+//			WebElement updateButton = driver.findElement(By.xpath("//div[@id='system-message-container']/div[1]/button[@class='btn btn-primary']"));
+//			WebElement updateButton = driver.findElement(By.xpath(joomlaUpdate));
+			WebElement updateButton = driver.findElement(By.xpath("//button[contains(text(), 'Update Now')]"));
 			updateButton.click();
 
 			// sleep

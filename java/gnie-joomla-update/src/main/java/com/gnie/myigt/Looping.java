@@ -21,8 +21,10 @@ public class Looping {
 
 			// Set Joomla Update Button
 			String joomlaUpdate = "document.location=" + gnieSite + "?option=com_joomlaupdate";
+			String xpath = "//button[@onClick="+joomlaUpdate ;
 
-			System.out.println(joomlaUpdate);
+//			System.out.println(joomlaUpdate);
+			System.out.println(xpath);
 
 		}
 }
