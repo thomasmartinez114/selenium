@@ -1,3 +1,8 @@
+/*Title:		Update Joomla Extensions, Version and Copy .css to Instance
+Author:			Thomas Martinez
+Date:			4/17/2021
+Purpose:		Automating the process of updating Joomla extensions/version*/
+
 package com.gnie.myigt;
 
 import org.openqa.selenium.By;
@@ -9,23 +14,22 @@ import org.testng.annotations.Test;
 public class PositiveTests {
 
 	@Test
-	public void loginTest() {
+	public void updateJoomlaAndExtensions() {
+		
+		
+//////////////////////////////////////////////////////////////
+//		Iterate through array of GNIE Links					//
+//////////////////////////////////////////////////////////////
 
-		String[] sites = {
-				"https://gnieqa.myigt.com/sites/us/dca/administrator/index.php",
-				"https://gnieqa.myigt.com/sites/us/fst/administrator/index.php",
-				"https://gnieqa.myigt.com/sites/us/rrf/administrator/index.php",
-				"https://gnieqa.myigt.com/sites/us/sd/administrator/index.php",
-				"https://gnieqa.myigt.com/sites/us/to/administrator/index.php",
-				"https://sch.gnieqa.myigt.com/schedule/administrator/index.php" };
+
+		String[] sites = { "https://gnieqa.myigt.com/sites/do/cc/administrator/index.php" };
 
 		for (int instance = 0; instance < sites.length; instance++) {
 
 			// setting String variable for gnieSite
 			String gnieSite = sites[instance];
-			System.out.println(gnieSite);
 
-			System.out.println("Starting login");
+			System.out.println("Updating Extensions for: " + gnieSite);
 
 			// Create Chrome Driver
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
@@ -33,6 +37,11 @@ public class PositiveTests {
 
 			// Maximize browser window
 			// driver.manage().window().maximize();
+			
+
+//////////////////////////////////////////////////////////////
+//			Open URL and Sign Into Admin Portal				//
+//////////////////////////////////////////////////////////////
 
 			// Open test page
 			String url = sites[instance];
@@ -52,18 +61,52 @@ public class PositiveTests {
 			// Click login button
 			WebElement loginButton = driver.findElement(By.tagName("button"));
 			loginButton.click();
+			System.out.println("SUCCESSFUL LOGIN");
 
 			// sleep
-			sleep(8000);
+			sleep(15000);
+			
 
-			// Set Joomla Update Button
-//			String joomlaUpdate = "//button[@onClick=document.location=" + gnieSite + "?option=com_joomlaupdate";
+//////////////////////////////////////////////////////////////
+//			Update Joomla Extensions						//
+//////////////////////////////////////////////////////////////
 
+			// Click Extensions Update Button
+			WebElement updateExtButton = driver.findElement(By.xpath("//button[contains(text(), 'View Updates')]"));
+			updateExtButton.click();
+
+			// sleep
+			sleep(3000);
+
+			// Click to install update
+			WebElement checkAllButton = driver.findElement(By.xpath(
+					"/html//div[@id='j-main-container']/table[@class='table table-striped']//input[@name='checkall-toggle']"));
+			checkAllButton.click();
+
+			// Initiate Update
+			WebElement updateConfirm = driver.findElement(By.xpath("//span[@class='icon-upload']"));
+
+			updateConfirm.click();
+
+			System.out.println("Extensions Update Initilized!");
+
+			sleep(120000);
+			
+
+//////////////////////////////////////////////////////////////
+//				Update Joomla Version						//
+//////////////////////////////////////////////////////////////
+
+			// Go back on browser to Joomla Admin Portal
+			WebElement backAdminPortal = driver.findElement(By.xpath("//span[@class='icon-joomla']"));
+			backAdminPortal.click();
+
+			sleep(4000);
+
+			// Update the Joomla Now
 			// Click Joomla Update Button
-//			WebElement updateButton = driver.findElement(By.xpath("//div[@id='system-message-container']/div[1]/button[@class='btn btn-primary']"));
-//			WebElement updateButton = driver.findElement(By.xpath(joomlaUpdate));
-			WebElement updateButton = driver.findElement(By.xpath("//button[contains(text(), 'Update Now')]"));
-			updateButton.click();
+			WebElement updateJoomButton = driver.findElement(By.xpath("//button[contains(text(), 'Update Now')]"));
+			updateJoomButton.click();
 
 			// sleep
 			sleep(3000);
@@ -72,17 +115,18 @@ public class PositiveTests {
 			WebElement installButton = driver.findElement(By.xpath(
 					"/html//form[@id='adminForm']//table[@class='table table-striped']//button[@class='btn btn-primary']"));
 			installButton.click();
+			System.out.println("Joomla Update Initilized!");
 
 		}
+		
+		
+//////////////////////////////////////////////////////////////
+//	Initiate PS1 to Copy Over Styling for Joomla Instance	//
+//////////////////////////////////////////////////////////////
 
-//		// sleep for install
-//		sleep(600000);
-//		
-//		// Verification:
-//		// new url
-//		
-//		// Close Browser
-//		driver.quit();
+
+		// Close Browser
+		// driver.quit();
 
 	}
 
