@@ -5,6 +5,8 @@ Purpose:		Automating the process of updating Joomla extensions/version*/
 
 package com.gnie.myigt;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +16,7 @@ import org.testng.annotations.Test;
 public class PositiveTests {
 
 	@Test
-	public void updateJoomlaAndExtensions() {
+	public void updateJoomlaAndExtensions() throws IOException {
 		
 		
 //////////////////////////////////////////////////////////////
@@ -22,7 +24,7 @@ public class PositiveTests {
 //////////////////////////////////////////////////////////////
 
 
-		String[] sites = { "https://gnieqa.myigt.com/sites/do/cc/administrator/index.php" };
+		String[] sites = { "https://gnie.myigt.com/sites/mx/cc/administrator/index.php" };
 
 		for (int instance = 0; instance < sites.length; instance++) {
 
@@ -90,7 +92,7 @@ public class PositiveTests {
 
 			System.out.println("Extensions Update Initilized!");
 
-			sleep(120000);
+			sleep(60000);
 			
 
 //////////////////////////////////////////////////////////////
@@ -123,11 +125,17 @@ public class PositiveTests {
 //////////////////////////////////////////////////////////////
 //	Initiate PS1 to Copy Over Styling for Joomla Instance	//
 //////////////////////////////////////////////////////////////
+		
+		sleep(120000);
 
+//		ProcessBuilder process = new ProcessBuilder("\\gnie.myigt.com/f$/upload_styling_post_update/run.cmd");
+//		process.start();
+//		System.out.println("COPYING STYLE CODE OVER TO INSTANCE");
 
 		// Close Browser
 		// driver.quit();
-
+		
+		
 	}
 
 	private void sleep(long m) {
