@@ -30,8 +30,8 @@ public class Looping {
 //
 //		}
 		
-		ProcessBuilder process = new ProcessBuilder("\\gnie.myigt.com\\f$\\upload_styling_post_update\\mex_style_update.ps1");
-		process.start();
+		 String[] command = {"cmd.exe", "/C", "Start", "\\gnie.myigt.com\\upload_styling_post_update\\run.cmd"};
+         Process p =  Runtime.getRuntime().exec(command); 
 }
 }
 
