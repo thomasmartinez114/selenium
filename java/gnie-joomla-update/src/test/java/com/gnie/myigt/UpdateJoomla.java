@@ -20,19 +20,24 @@ public class UpdateJoomla {
 //////////////////////////////////////////////////////////////
 //		Iterate through array of GNIE Links					//
 //////////////////////////////////////////////////////////////
-
-		// TODO Poland, Trinidad, Jamaica, DR and Mexico are completed
+		
+		
+		// TODO Way to import the list of links so not hard coded
 		String[] sites = { 
-				
-				"https://gnie.myigt.com/sites/ca/cc/administrator/index.php",
-				"https://gnie.myigt.com/sites/cr/cc/administrator/index.php",
-				"https://gnie.myigt.com/sites/us/fst/administrator/index.php",
-				"https://gnie.myigt.com/sites/us/rrf/administrator/index.php",
-				"https://gnie.myigt.com/sites/us/sd/administrator/index.php",
-				"https://gnie.myigt.com/sites/us/to/administrator/index.php",
-				"https://sch.gnie.myigt.com/schedule/administrator/index.php",
-				"https://gnie.myigt.com/sites/us/dca/administrator/index.php"
-				
+				"https://gnieqa.myigt.com/sites/ca/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/cr/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/do/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/jm/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/mx/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/pl/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/tt/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/us/cc/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/us/fst/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/us/rrf/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/us/sd/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/us/to/administrator/index.php",
+				"https://sch.gnieqa.myigt.com/schedule/administrator/index.php",
+				"https://gnieqa.myigt.com/sites/us/dca/administrator/index.php"
 				};
 
 		for (int instance = 0; instance < sites.length; instance++) {
@@ -59,7 +64,8 @@ public class UpdateJoomla {
 			System.out.println("Browser as been open.");
 
 			// Log into Joomla Admin
-
+			// TODO create GNIE_Joomla account for this --- add via sql statement for all sites
+			
 			// Enter username
 			WebElement username = driver.findElement(By.id("mod-login-username"));
 			username.sendKeys("");
@@ -73,7 +79,7 @@ public class UpdateJoomla {
 			loginButton.click();
 			System.out.println("SUCCESSFUL LOGIN");
 
-			// sleep
+			// sleep 15 seconds
 			sleep(15000);
 
 //////////////////////////////////////////////////////////////
@@ -139,6 +145,9 @@ public class UpdateJoomla {
 //				System.out.println("Waiting for update to complete");
 //			}
 //			while (actualUrl != expectedUrl);
+			
+			// TODO Grab the joomla update confirmation text			
+			// WebElement joomlaConfirm = driver.findElement(By.xpath("/html//section[@id='content']//p[@class='alert alert-success']"));
 			
 
 			// Close Browser
