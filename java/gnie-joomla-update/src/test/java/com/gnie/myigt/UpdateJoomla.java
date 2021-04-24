@@ -134,24 +134,24 @@ public class UpdateJoomla {
 			// Check if URL has completion in
 //			WebElement successBanner = driver.findElement(By.xpath("/html//section[@id='content']//p[@class='alert alert-success']"));
 			
-//			String expectedUrl = gnieSite + "?option=com_joomlaupdate&view=default&layout=complete";
-//			String actualUrl = driver.getCurrentUrl();
+			String expectedUrl = gnieSite + "?option=com_joomlaupdate&view=default&layout=complete";
+			String actualUrl = driver.getCurrentUrl();
 			
 			// TODO Get verification of update working
 			
 			// Sleep 30 seconds until the urls match
-//			do {
-//				sleep(30000);
-//				System.out.println("Waiting for update to complete");
-//			}
-//			while (actualUrl != expectedUrl);
+			do {
+				sleep(30000);
+				System.out.println("Waiting for update to complete");
+			}
+			while (actualUrl != expectedUrl);
+			
+			// Close Browser
+//			driver.close();
 			
 			// TODO Grab the joomla update confirmation text			
 			// WebElement joomlaConfirm = driver.findElement(By.xpath("/html//section[@id='content']//p[@class='alert alert-success']"));
 			
-
-			// Close Browser
-//			driver.close();
 			
 			sleep(60000);
 
